@@ -19,3 +19,7 @@
 .card-details {
   padding: 2px 16px;
 }
+
+ul {
+  list-style-type: none;
+}

@@ -1,17 +1,52 @@
-import React from "react";
+import React, { Component } from "react";
 import "../styles/InputField.css";
 
-const InputField = props => (
-  <div className="search">
-    <input
-      type="text"
-      className="search-term"
-      placeholder="Show me the country"
-    />
-    <button type="submit" className="search-button">
-      <i className="fa fa-search"></i>
-    </button>
-  </div>
-);
+class InputField extends Component {
+  constructor() {
+    super();
+    this.state = {
+      inputFieldValue: ""
+    };
+  }
+
+  captureInputValues = event => {
+    const inputFieldValue = event.target.value;
+
+    return this.setState({ inputFieldValue });
+  };
+
+  handleOnClick = () => {
+    const { gimmeTheSearchValue } = this.props;
+    const { inputFieldValue } = this.state;
+
+    gimmeTheSearchValue(inputFieldValue);
+
+    return this.setState({ inputFieldValue: "" });
+  };
+
+  render() {
+    const { inputFieldValue } = this.state;
+
+    return (
+      <form className="search">
+        <input
+          value={inputFieldValue}
+          className="search-term"
+          name="country"
+          type="text"
+          placeholder="Show me the country"
+          onChange={this.captureInputValues}
+        />
+        <button
+          className="search-button"
+          type="button"
+          onClick={this.handleOnClick}
+        >
+          <i className="fa fa-search"></i>
+        </button>
+      </form>
+    );
+  }
+}
 
 export default InputField;
