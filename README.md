@@ -15,4 +15,4 @@ Documentation for fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_
 ## Update:
 There's aslo a branch V3 - Tests which includes... tests. 
 
-App.spec.jsx tests are still a work in progress.
+Tests on `App.spec.jsx` are a work in progress.
