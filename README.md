@@ -12,3 +12,7 @@ API for flags: https://www.countryflags.io/
 Documentation for fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
 
+## Update:
+There's aslo a branch V3 - Tests which includes... tests. 
+
+App.spec.jsx tests are still a work in progress.
