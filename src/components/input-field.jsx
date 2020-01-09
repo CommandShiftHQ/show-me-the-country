@@ -42,7 +42,7 @@ class InputField extends Component {
           type="button"
           onClick={this.handleOnClick}
         >
-          <i className="fa fa-search"></i>
+          <span className="fa fa-search"></span>
         </button>
       </form>
     );
